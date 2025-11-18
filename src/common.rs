@@ -115,10 +115,6 @@ pub fn global_init() -> bool {
             crate::server::wayland::init();
         }
     }
-    #[cfg(target_os = "macos")]
-    {
-        crate::platform::macos::try_remove_temp_update_dir(None);
-    }
     true
 }
 
@@ -1050,7 +1046,7 @@ fn get_api_server_(api: String, custom: String) -> String {
             return format!("http://{}", s);
         }
     }
-    "https://admin.rustdesk.com".to_owned()
+    "".to_owned()
 }
 
 #[inline]

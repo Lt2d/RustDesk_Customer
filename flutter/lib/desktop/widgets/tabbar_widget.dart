@@ -264,7 +264,7 @@ class DesktopTab extends StatefulWidget {
     this.showLogo = true,
     this.showTitle = false,
     this.showMinimize = true,
-    this.showMaximize = true,
+    this.showMaximize = false,
     this.showClose = true,
     this.pageViewBuilder,
     this.tabMenuBuilder,
