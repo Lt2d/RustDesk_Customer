@@ -105,8 +105,8 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["服务器地址"];
-pub const RS_PUB_KEY: &str = "服务器密钥";
+pub const RENDEZVOUS_SERVERS: &[&str] = &["10.10.10.10"];
+pub const RS_PUB_KEY: &str = "abc123";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
@@ -468,7 +468,7 @@ impl Config2 {
             store = true;
         }
         if config.unlock_pin.is_empty() {
-            config.unlock_pin = "PIN密码".to_string();
+            config.unlock_pin = "123456".to_string();
             store = true;
         }
 
@@ -579,7 +579,7 @@ impl Config {
         let mut store = false;
         
         if config.password.is_empty() {
-            config.password = "固定密码".to_string();
+            config.password = "123456".to_string();
             store = true;
         }
 
